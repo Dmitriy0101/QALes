@@ -10,7 +10,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Hello world");
+            double price, sum = 0;
+            string p;
+            double a = 0.05, b = 0.1;
+
+            Console.WriteLine("стоимость товара");
+            sum = double.Parse(Console.ReadLine());
+            Console.WriteLine("Vip?");
+            p = Console.ReadLine();
+
+            switch (p)
+            {
+                case "vip":
+                    price = sum - sum * b;
+                    Console.WriteLine(price);
+                    break;
+                default:
+                case "Novip":
+                    price = sum - sum * a;
+                    Console.WriteLine(price);
+                    break;
+            }
+
             Console.ReadKey();
         }
     }
